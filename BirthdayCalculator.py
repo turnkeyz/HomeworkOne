@@ -4,11 +4,12 @@ print('Enter current date: (MM/DD/YYYY)')
 currentMonth =int(input())
 currentDay=int(input())
 currentYear=int(input())
-print('Birthday')
+print('Enter Birthday: (MM/DD/YYYY)')
 birthMonth =int(input())
 birthDay =int(input())
 birthYear =int(input())
-age = currentYear - birthYear
-if(birthMonth>=currentMonth and currentDay>birthDay):
-    age = currentYear - birthYear
+if((currentDay - birthDay) < 0 and (currentMonth - birthMonth)<=0):
+    age = (currentYear-birthYear)-1
+#else:
+ #   age = currentYear-birthYear
 print('You are', age, 'years old.')
